@@ -1,0 +1,9 @@
+#This is used to go through a food list and split the list in two depending on length of word. Longer words are flagged up with !!!
+
+food_list=['Pancake','Egg','Garlic','Pasta','Eggnog','Bee honey','Shoe honey','Maccarroni','Appleeees']
+
+for i in food_list:
+    if len(i)>5:
+        print(i," is longer than five characters.")
+    else:
+        print(i," is short.")
