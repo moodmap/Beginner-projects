@@ -1,0 +1,25 @@
+#As a first basic project I'll allow the user to select two dice and 'roll' them. Each die has a max number of 6.
+#The user input doesn't have any effect here as I'm working out how user can select from a list (without using numbers to select).
+
+import random
+
+dice_list=['Green','Red','Blue','Orange']
+
+green_die=dice_list[0]
+red_die=dice_list[1]
+blue_die=dice_list[2]
+orange_die=dice_list[3]
+
+
+print("Welcome. Please select two dice from the following:")
+print(dice_list)
+
+die_one=input("Please select your first dice.\n")
+die_two=input("And your second.\n")
+
+print("You have selected ",die_one," and ",die_two,". Let's roll them and see your result")
+
+result_one=random.randint(1,6)
+result_two=random.randint(1,6)
+
+print("You have rolled ",result_one,", and ",result_two,". Which equals a total of ",(result_one+result_two))
