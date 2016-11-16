@@ -14,4 +14,5 @@ else:
     for x in range (free_time):
         print(random.choice(chore_suggestions))
 
-#The next step up will be to make sure suggestions aren't repeated
+#The next step up will be to make sure suggestions aren't repeated. I need to find a way to temporarily delete an item from the list
+#or 'mute' it
