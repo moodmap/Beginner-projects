@@ -1,0 +1,17 @@
+#This program will generate a list of chores you can do based on your available time
+
+import random
+
+chore_suggestions=['Dust','Wash up','DIY','Hoover','Change linen','Wash clothes','Paint','Pump up bike tyres','Rearrange room','Recharge bike lights','Rake leaves']
+
+print(len(chore_suggestions))
+
+free_time=int(input("Welcome to Chore-master 3.0. Please enter how many minutes you have spare to do chores\n"))
+
+if free_time > (len(chore_suggestions)):
+    print("You have too much time on your hands")
+else:
+    for x in range (free_time):
+        print(random.choice(chore_suggestions))
+
+#The next step up will be to make sure suggestions aren't repeated
