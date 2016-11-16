@@ -1,0 +1,8 @@
+for x in range (1,101):
+    if x is 97:
+        print(x," is awesome")
+        break
+    elif x%4 is 0:
+        print(x)
+    else:
+        print(x," is not divisible by four.")
