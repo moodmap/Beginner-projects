@@ -1,0 +1,51 @@
+#randomly select a situation
+#situation has three outcomes. One is death, one is a reward, one is nothing
+import random
+
+wallet = 0
+health = 3
+story_val = 5
+story_list = ["A dolphin waves at you","You find the one ring","There's a man with a gun","You see Donald Trump"]
+options_list = [["Punch the dolphin","RUN","Nothing"],["Into the flames!","Wear it","Nothing"],["Slap him","Hug him", "Do nothing"],["Call him 'Trumpy Wumpy'","Jump infront of an egg that's being thrown at him","Giggle at his rosey cheeks"]]               
+results_list = [["'OW I KEEL YOO","Phew..oo a penny","Nada"],["HOT","You find a necklace","Naada"],["He shoots you","Awwww..hey my wallet","Nothing happens"],["His bodyguards come in the night","'Thanks here's $1...now let's make eggs great again'","It upsets Donald but nothing happens"]]
+
+def story_pick():
+    global story_val
+    story_val = random.randint(0,3)
+    
+
+def story():
+    choice = input("{}. Do you 'a' {} , 'b' {}, or 'c' {}?: ".format(story_list[story_val], options_list[story_val][0], options_list[story_val][1], options_list[story_val][2]))
+    var = 5  
+    if choice == "a":
+        global health
+        health -= 1
+        var = 0
+    elif choice == "b":
+        global wallet
+        wallet += 1
+        var = 1
+    elif choice == "c":
+        var = 2
+
+    print(results_list[story_val][var])
+
+
+def report():
+    print("You have {} gold".format(wallet))
+    print("You have {} health".format(health))
+        
+              
+
+while health > 0 and wallet < 5:
+    report()
+    story_pick()
+    story()
+
+report()
+if health == 0: 
+    print("The end. You're emotionally not good.")
+else:
+    print("You are the best of the best.")
+    
+    
