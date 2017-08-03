@@ -1,0 +1,45 @@
+import time
+
+a = ""
+b = ""
+c = ""
+d = ""
+prevFile = ""
+tstamp = time.strftime("%I:%M:%S")
+dstamp = (time.strftime("%d/%m/%Y"))
+
+def how():
+    print (time.strftime("%I:%M:%S"))
+    print (time.strftime("%d/%m/%Y"))
+    global a
+    global b
+    global c
+    global d
+    a = input("How are you today?: ")
+    b = input("What things happened today?: ")
+    c = input("What was the main happening of the day? Was it good or bad?: ")
+    if "good" in c:
+        print("Good? That's great.")
+    else:
+        d = input("I'm sorry it wasn't good. How can I help?: ")
+
+def open_file():
+    global prevFile
+    file = open("diary.txt","r")
+    for line in file:
+        prevFile += line
+    file.close()
+
+def writeFile():
+    files = open("diary.txt","a")
+    files.write(dstamp +"\n")
+    files.write(tstamp +"\n")
+    files.write(a + "\n")
+    files.write(b + "\n")
+    files.write(c + "\n")
+    files.write(d + "\n\n")
+    files.close()
+
+how()
+#open_file()
+writeFile()
