@@ -1,0 +1,23 @@
+#class
+#class inheritance
+#super() inheritance
+
+class Animal:
+    def __init__(self, species, colour):
+        self.species = species
+        self.colour = colour
+
+    def roar(self):
+        print("AGRAWWW")
+
+class Penguin(Animal):
+    def goo(self):
+        super().roar()
+
+penguin = Penguin("Penguin","Black with orange bits")
+koala = Penguin("Koala","Grey")
+
+print(penguin.colour)
+print(koala.species)
+
+koala.goo()
