@@ -1,0 +1,46 @@
+from random import choice
+
+x = " "
+
+def pet():
+    my_pets = ['Dog','Rabbit','Parrot','Fish']
+    global x
+    x = choice(my_pets)
+    print("These are my pets: ")
+    for pet in my_pets:
+        print(pet)
+
+    print("Here is one of them: {}".format(x))
+
+
+def pet_write():
+    global x
+    file = open("animals.txt","a")
+    file.write("\n")
+    file.write(x)
+    file.close()
+
+
+def pet_count():
+    dcount = 0
+    rcount = 0
+    pcount = 0
+    fcount = 0
+    
+    file = open("animals.txt","r")
+    for line in file:
+        if "Dog" in line:
+            dcount += 1
+        elif "Rabbit" in line:
+            rcount += 1
+        elif "Parrot" in line:
+            pcount += 1
+        elif "Fish" in line:
+            fcount += 1
+        else:
+            pass
+    print("I have {} Dogs, {} Rabbits, {} Parrots, and {} Fish".format(dcount, rcount, pcount, fcount))
+
+pet()
+pet_write()
+pet_count()
