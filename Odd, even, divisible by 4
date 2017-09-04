@@ -1,0 +1,15 @@
+while True:
+    
+    print("This program will tell you if your number is odd or even")
+
+    user_no = input("Provide a number: ")
+
+    if int(user_no) % 2 == 0 and not int(user_no) % 4 == 0:
+        print("Your number, {} is even".format(user_no))
+    elif int(user_no) % 4 == 0:
+        print("your number {} is divisible by 4".format(user_no))
+    elif user_no == "Quit":
+        break
+    else:
+        print("Your number, {} is odd".format(user_no))
+
