@@ -1,0 +1,9 @@
+#An exercise from practisepython.org. Takes user info - name, age, and no of time they want to receive info. Returns the year it will be when they're 100 (assuming they are using this in 2017).
+
+user_name = input("What's your name?: ")
+user_age = input("How old are you?: ")
+rep = int(input("How many times do you want to see info?: "))
+year_100 = (100 - int(user_age)) + 2017
+
+for i in range (rep):
+    print("\n{}, in the year {} you will be 100 years old!".format(user_name, year_100))
