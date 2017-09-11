@@ -1,0 +1,13 @@
+file = open('prr.txt','w')
+file.write("Prrrri\n")
+file.write("2\n")
+file.write("grill\n")
+file.close()
+
+file_open = open('prr.txt','r')
+
+for i in file_open:
+    print(i)
+
+
+
