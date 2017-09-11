@@ -1,0 +1,29 @@
+class Sims():
+    def __init__(self, name, sex, height, career, playfulness, cleanliness, activity):
+        self.name = name
+        self.sex = sex
+        self.height = height
+        self.career = career
+        self.playfulness = playfulness
+        self.cleanliness = cleanliness
+        self.activity = activity
+
+    def details(name):
+        print("Name: {}, Sex: {}, Height: {}, Career: {}, Playfulness: {}, Cleanliness: {}".format(name.name, name.sex, name.height, name.career, name.playfulness, name.cleanliness, name.activity))
+
+
+Frank = Sims('Frank', 'M', 130,'Musician', 8, 2, 7)
+Frank_details = "Name: {}, Sex: {}, Height: {}, Career: {}, Playfulness: {}, Cleanliness: {}".format(Frank.name, Frank.sex, Frank.height, Frank.career, Frank.playfulness, Frank.cleanliness, Frank.activity)
+Minnie = Sims('Minnie', 'F',80, 'Chef', 4, 8, 7)
+Minnie_details = "Name: {}, Sex: {}, Height: {}, Career: {}, Playfulness: {}, Cleanliness: {}".format(Minnie.name, Minnie.height, Minnie.career, Minnie.playfulness, Minnie.cleanliness, Minnie.activity)
+
+def intro():
+    user_intro = input('Hello, its time to choose a character. Would you like to see a male character or female character? (M/F): '.upper())
+    if user_intro == 'M':
+        Frank.details()
+    elif user_intro == 'F':
+        Minnie.details()
+
+
+intro()
+
