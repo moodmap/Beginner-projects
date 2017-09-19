@@ -1,0 +1,10 @@
+#A small piece of code testing out recursion for the first time.
+#Had to add an if statement to stop the program looping infinitely
+
+def fib(x):
+    if x> 0:
+        print(x * x)
+        fib(x-1)
+    else:
+        print('The End')
+fib(10)
