@@ -1,0 +1,25 @@
+class Sim():
+    def __init__(self, name, height):
+        self.name = name
+        self.height = height
+        
+
+    def draw(self, height):
+        h = ["|"] * height
+        for i in h:
+            print("  {}".format(i))
+
+person = int(input("What's your character's height?: "))
+name = input("What's your Sim's name?: ")
+
+sim1 = Sim(name, person)
+
+print("\n\n  _  ")
+print("_|_|_")
+print(" o-o")
+print("  ! ")
+sim1.draw(sim1.height)
+print(" | |")
+print("\n\nThis is {} in all its glory!".format(name.upper()))
+
+
